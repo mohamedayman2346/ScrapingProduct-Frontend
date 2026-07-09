@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+*::selection {
+  background-color: black;
+  color: yellow;
+}
+
+a.active {
+  background-color: #1d293d;
+  color: white;
+  font-weight: bold;
+}
+
+@layer components {
+  .nav-link {
+    @apply px-4 py-2 rounded-md  transition-colors;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md text-white bg-slate-800 hover:bg-slate-600 active:bg-slate-400  transition-colors;
+  }
+
+  .num{
+    @apply text-center rounded-full bg-zinc-400 text-slate-500 w-7 h-7 inline-block p-0 me-2
+  }
+
+  [class^="step-"]{
+    @apply flex items-center
+  }
+}
