@@ -17,10 +17,10 @@ export default function Herosection() {
     if (search.trim() === "") return;
     setLoading(true);
     try {
-      // let res = await axios.get(`http://localhost:8000/api/search?q=${search}&limit=${limit}`);
-      let res = await axios.get(
-        `https://Helmy.pythonanywhere.com/api/search?q=${search}&limit=${limit}`,
-      );
+      let res = await axios.get(`http://localhost:8000/api/search?q=${search}&limit=${limit}`);
+      // let res = await axios.get(
+      //   `https://Helmy.pythonanywhere.com/api/search?q=${search}&limit=${limit}`,
+      // );
       setProduct(res.data);
       setSearch("");
     } catch (err) {
